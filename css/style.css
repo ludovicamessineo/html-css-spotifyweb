@@ -9,6 +9,7 @@
 html {
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
+    color: white;
 }
 
 .container {
@@ -35,8 +36,11 @@ a {
 main {
     height: calc(100% - 80px);
     width: 100%;
+    overflow: hidden;
 }
 
+
+/* SIDEBAR */
 .sidebar {
     float: left;
     width: 200px;
@@ -44,11 +48,44 @@ main {
     background-color: black;
 }
 
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 80px);
+    min-height: 300px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo > img {
+    width: 25%;
+    padding: 15px 5px 15px 15px;
+    filter: invert();
+}
+
+.playlist {
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.playlist ul {
+    height: 80%;
+    overflow-y: auto;
+}
+
+.sidebar-bottom {
+    height: 80px;
+}
+
 .main-content {
     float: left;
     width: calc(100% - 200px);
     height: 100%;
     overflow-y: auto;
+    background-color: #141922;
 }
 
 .upgrade {
@@ -74,11 +111,10 @@ main {
     padding: .7rem 3rem;
 }
 
-/* .content {
+.content {
     height: 100%;
     padding: 100px 20px 20px;
-    background-color: #141922;
-} */
+}
 
 
 /* FOOTER */
@@ -88,11 +124,3 @@ footer {
     background-color: #282828;
 }
 
-.left-footer {
-    display: flex;
-    align-items: center;
-}
-
-.left-footer > img {
-    width: 3%;
-}
