@@ -41,6 +41,15 @@ ul {
     list-style: none;
 }
 
+h3 {
+    margin-top: 15px;
+}
+
+p {
+    margin-top: 8px;
+    color: #646464;
+}
+
 /* MAIN */
 main {
     height: calc(100% - 80px);
@@ -269,7 +278,8 @@ main {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
+    opacity: .5;
 }
 
 @media screen and (max-width: 600px) {
@@ -303,6 +313,8 @@ main {
     margin: auto;
 }
 
+
+/* Music menu */
 .music-menu {
     text-align: center;
 }
@@ -318,6 +330,8 @@ main {
     border-bottom: 1px solid yellowgreen;
 }
 
+
+/* Album */
 .album-container {
     margin: 20px;
 }
@@ -341,15 +355,6 @@ main {
     margin-right: 15px;
 } 
 
-.albums > h3 {
-    margin-top: 15px;
-}
-
-.albums > p {
-    margin-top: 3px;
-    color: #646464;
-}
-
 @media screen and (max-width: 1100px) {
     .albums {
         width: calc(100% / 4 - 15px);
@@ -366,6 +371,29 @@ main {
     }
 }
 
+/* Preferiti */
+.favourite-row {
+    margin-left: 15px;
+}
+
+.mix {
+    display: flex;
+    text-align: center;
+}
+
+.artist {
+    width: calc(100% / 6 - 15px);
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.artist-row {
+    margin: 30px 15px;
+}
+
+.round > img {
+    border-radius: 50%;
+}
 
 /* FOOTER */
 footer {
