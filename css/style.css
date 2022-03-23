@@ -269,7 +269,7 @@ main {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: .5rem;
+    padding-right: 1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -290,6 +290,11 @@ main {
     border: 1px solid white;
     border-radius: 20px;
     padding: .7rem 3rem;
+    transition: transform;
+}
+
+.upgrade > a:hover {
+    transform: scale(1.1);
 }
 
 .content {
@@ -311,6 +316,29 @@ main {
 
 .list-menu-music a.active {
     border-bottom: 1px solid yellowgreen;
+}
+
+.album-container {
+    margin: 20px;
+}
+
+.album-container > h2 {
+    font-size: 1.8rem;
+    padding-bottom: 15px;
+}
+
+.album-row {
+    display: flex;
+}
+
+.albums {
+    margin-right: 15px;
+    
+} 
+
+.albums > img {
+    width: (100% / 6) - 15px;
+    height: auto;
 }
 
 /* FOOTER */
