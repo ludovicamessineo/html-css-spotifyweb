@@ -329,17 +329,43 @@ main {
 
 .album-row {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .albums {
+    width: calc(100% / 6 - 15px);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0px;
+    text-align: center;
     margin-right: 15px;
-    
 } 
 
-.albums > img {
-    width: (100% / 6) - 15px;
-    height: auto;
+.albums > h3 {
+    margin-top: 15px;
 }
+
+.albums > p {
+    margin-top: 3px;
+    color: #646464;
+}
+
+@media screen and (max-width: 1100px) {
+    .albums {
+        width: calc(100% / 4 - 15px);
+        flex: unset;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .albums {
+        width: calc(100% / 2 - 15px);
+        flex: unset;
+        margin-bottom: 15px;
+    }
+}
+
 
 /* FOOTER */
 footer {
