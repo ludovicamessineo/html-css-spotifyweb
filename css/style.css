@@ -30,7 +30,11 @@ img {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #646464;
+}
+
+a:hover {
+    color: white;
 }
 
 /* MAIN */
@@ -47,6 +51,12 @@ main {
     width: 200px;
     height: 100%;
     background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 80px;
+    }
 }
 
 .sidebar-top {
@@ -75,6 +85,7 @@ main {
     .logo-mobile {
         display: block;
         text-align: center;
+        padding: 5px;
     }
 
     .logo-mobile > img {
@@ -84,14 +95,48 @@ main {
 
 
 /* Menù */
-.menu > div {
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
+.list-menu a {
+    display: inline-block;
+    line-height: 3rem;
+    padding-left: 20px;
+    border-left: 3px solid transparent;
 }
 
-.icon-menu {
-    width: 10%;
+.list-menu a.active {
+    border-left: 3px solid greenyellow;
+}
+
+.list-menu img {
+    width: 25px;
+    vertical-align: middle;
+    opacity: .5;
+}
+
+.list-menu a:hover > img {
+    opacity: 1;
+}
+
+.list-menu span {
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+    .list-menu {
+        text-align: center;
+    }
+
+    .list-menu a {
+        border: 0;
+        padding-left: 0;
+    }
+
+    .list-menu a.active {
+        border: 0;
+    }
+
+    .list-menu span {
+        display: none;
+    }
 }
 
 
@@ -99,37 +144,104 @@ main {
 .playlist {
     overflow: hidden;
     flex-grow: 1;
-    padding: 10px;
 }
 
 .playlist > h3 {
     text-transform: uppercase;
+    font-size: 1.2rem;
+    padding-left: 20px;
+    padding-top: 10px;
 }
 
-.plus-playlist {
-    padding: 10px 0;
+.playlist-btn {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    opacity: .5;
+}
+
+.playlist-btn:hover {
+    opacity: 1;
 }
 
 .plus {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
     font-size: 3rem;
-    padding: 0 1rem;
+    text-align: center;
+    line-height: 30px;
     color: #080b12;
     background-color: #a3a3a3;
 }
+
 
 .playlist > ul {
     height: 80%;
     overflow-y: auto;
 }
 
+@media screen and (max-width: 600px) {
+    .playlist {
+        display: none;
+    }
+}
 
+/* Sidebar Bottom */
 .sidebar-bottom {
     height: 80px;
+    padding: 0 20px;  
+}
+
+.cta-install {
+    border-bottom: 1px solid #a3a3a3;
+    padding-bottom: 5px;
+}
+
+.cta-install img {
+    width: 15px;
+    vertical-align: middle;
+    opacity: .5;
+}
+
+.cta-install a:hover > img {
+    opacity: 1;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.user-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #646464;
+    overflow: hidden;
+    margin-right: 5px;
 }
 
 @media screen and (max-width: 600px) {
-    .sidebar {
-        width: 80px;
+    .cta-install span,
+    .user-profile > h4 {
+        display: none;
+    }
+    
+    .sidebar-bottom {
+        text-align: center;
+    }
+
+    .user-profile {
+        justify-content: center;
+    }
+
+    .user-icon {
+        margin: 0;
     }
 }
 
