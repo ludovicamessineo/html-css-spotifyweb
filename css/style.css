@@ -385,7 +385,7 @@ main {
 }
 
 @media screen and (max-width: 1100px) {
-    .albums {
+    .album-row > li {
         width: calc(100% / 4 - 15px);
         flex: unset;
         margin-bottom: 15px;
@@ -393,7 +393,7 @@ main {
 }
 
 @media screen and (max-width: 600px) {
-    .albums {
+    .album-row > li {
         width: calc(100% / 2 - 15px);
         flex: unset;
         margin-bottom: 15px;
